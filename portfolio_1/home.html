@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="icon.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Portfolio</title>
+</head>
+
+<body>
+    <div class="header">
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#project">Project</a></li>
+                <li><a href="#contact">Contact me</a></li>
+            </ul>
+        </nav>
+    </div>
+    <section id="home" class="home">
+        <div class="home-content">
+            <img src="assets/profile.png" alt="Profile">
+            <h1>Rouaa Moustafa</h1>
+            <h2>Software Developer</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium reiciendis dolor tempora blanditiis impedit ab accusamus! Iure eius cupiditate nihil.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium reiciendis dolor tempora blanditiis impedit ab accusamus! Iure eius cupiditate nihil.</p>
+            <button class="btn-download">Download CV</button>
+        </div>
+    </section>
+    <section id="about" class="about">
+        <h1>About Me</h1>
+        <p>After a successful 4 years in the sales world, I decided to pursue my passion for programming. I enrolled in a coding bootcamp and learned full-stack web development. My favorite part of programming is creating apps that are both beautiful and useful. My core stack is React, TypeScript, Next.js, Node.js, and Prisma. I'm currently looking for a full-time position as a software developer.
+
+            In my freetime, I enjoy cycling, playing games, and traveling. I also love learning new things. I am currently learning about maintaining and fixing road bikes.</p>
+    </section>
+    <section id="skills" class="skills">
+        <h1>Skills</h1>
+        <div class="skills-container">
+            <div class="skill-card">HTML</div>
+            <div class="skill-card">CSS</div>
+            <div class="skill-card">JavaScript</div>
+            <div class="skill-card">TypeScript</div>
+            <div class="skill-card">Java</div>
+            <div class="skill-card">SQL</div>
+            <div class="skill-card">Flutter</div>
+            <div class="skill-card">Python</div>
+          </div>
+    </section>
+    <section id="project" class="card-section">
+        <h1>Projects</h1>
+        
+        <div class="page-content">
+            <!-- Card 1 -->
+            <div class="card" style="background-image: url('assets/agriculture.png');">
+              <div class="content">
+                <h2 class="title">App Name</h2>
+                <p class="copy">Lorem ipsum dolor sit amet </p>
+                <button class="btn">View App</button>
+              </div>
+            </div>
+        
+            <!-- Card 2 -->
+            <div class="card" style="background-image: url('assets/food_app.png');">
+              <div class="content">
+                <h2 class="title">App Name</h2>
+                <p class="copy">Lorem ipsum dolor sit amet </p>
+                <button class="btn">View App</button>
+              </div>
+            </div>
+        
+            <!-- Card 3 -->
+            <div class="card" style="background-image: url('assets/uber.png');">
+              <div class="content">
+                <h2 class="title">App Name</h2>
+                <p class="copy">Lorem ipsum dolor sit amet </p>
+                <button class="btn">View App</button>
+              </div>
+            </div>
+        
+            <!-- Card 4 -->
+            <div class="card" style="background-image: url('assets/book-appointement.png');">
+              <div class="content">
+                <h2 class="title">App Name</h2>
+                <p class="copy">Lorem ipsum dolor sit amet </p>
+                <button class="btn">View App</button>
+              </div>
+            </div>
+            <!-- Card 5 -->
+            <div class="card" style="background-image: url('assets/movie.png');">
+                <div class="content">
+                    <h2 class="title">App Name</h2>
+                    <p class="copy">Lorem ipsum dolor sit amet </p>
+                    <button class="btn">View App</button>
+                </div>
+              </div>
+            <!-- Card 6 -->
+              <div class="card" style="background-image: url('assets/e-learning.png');">
+                <div class="content">
+                    <h2 class="title">App Name</h2>
+                    <p class="copy">Lorem ipsum dolor sit amet </p>
+                    <button class="btn">View App</button>
+                </div>
+              </div>
+          </div>
+    </section>
+    <section id="contact" class="contact-section">
+        <h2 class="contact-title">Contact Me</h2>
+        <form class="contact-form">
+          <div class="form-group">
+            <input type="email" id="email" name="email" class="form-input" placeholder="Enter your email" required />
+          </div>
+          <div class="form-group">
+            <textarea id="message" name="message" class="form-textarea" placeholder="Write your message here" required></textarea>
+          </div>
+          <button type="submit" class="form-submit">Send Message</button>
+        </form>
+      </section>
+      
+    <div class="footer">
+        <div class="center-line"></div>
+        <p>&copy; 2024 Rouaa Moustafa</p>
+        <div class="social-menu">
+            <ul>
+                <li><a href='#'><i class="fab fa-github"></i></a></li>
+                <li><a href='#'><i class="fab fa-linkedin-in"></i></a></li>
+                
+              
+            </ul>
+        </div>
+
+    </div>
+</body>
+<script>
+  const header = document.querySelector('.header');
+  let lastScrollY = 0;
+  
+  window.addEventListener('scroll', () => {
+      const currentScrollY = window.scrollY;
+  
+      if (currentScrollY > lastScrollY && currentScrollY > 50) {
+          header.classList.add('hidden');
+      } else if (currentScrollY < lastScrollY) {
+          header.classList.remove('hidden');
+      }
+  
+      lastScrollY = currentScrollY;
+  });
+  header.addEventListener('mouseenter', () => {
+      header.classList.remove('hidden');
+  });
+  </script>
+</html>
